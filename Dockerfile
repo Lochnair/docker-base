@@ -6,4 +6,5 @@ LABEL Description="Base image"
 RUN apk add \
     --no-cache \
     --update \
-    su-exec
+    su-exec \
+    tzdata
