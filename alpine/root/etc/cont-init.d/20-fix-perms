@@ -2,8 +2,10 @@ PUID=${PUID:-313}
 PGID=${PGID:-313}
 
 chown -R $PUID:$PGID /app
+chown -R $PUID:$PGID /config
 
 echo "
 -- 20-fix-perms --
 Fixed /app folder permissions
+Fixed /config folder permissions
 "
