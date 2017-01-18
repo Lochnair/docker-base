@@ -20,7 +20,7 @@ apk add \
     tzdata && \
 
 # Install S&-overlay
-curl -o /tmp/s6-overlay-${S6_ARCH}.tar.gz https://github.com/just-containers/s6-overlay/releases/download/${S6_VER}/s6-overlay-${S6_ARCH}.tar.gz && \
+curl -L -o /tmp/s6-overlay-${S6_ARCH}.tar.gz https://github.com/just-containers/s6-overlay/releases/download/${S6_VER}/s6-overlay-${S6_ARCH}.tar.gz && \
 tar xzf /tmp/s6-overlay-${S6_ARCH}.tar.gz -C / && \
 
 # Create app folder
