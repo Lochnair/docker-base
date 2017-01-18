@@ -1,7 +1,7 @@
 FROM lochnair/base:alpine
 MAINTAINER Lochnair <me@lochnair.net>
 
-LABEL Description="Base image w/Python 2.7"
+LABEL Description="Python 2.7 base image (Alpine)"
 
 # Install Python
 RUN apk add \

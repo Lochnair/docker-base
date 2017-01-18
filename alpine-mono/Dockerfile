@@ -1,7 +1,7 @@
 FROM lochnair/base:alpine
 MAINTAINER Lochnair <me@lochnair.net>
 
-LABEL Description="Base image w/Mono"
+LABEL Description="Mono base image (Alpine)"
 
 # Install Mono
 RUN apk add \
