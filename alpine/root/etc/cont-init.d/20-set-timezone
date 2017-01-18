@@ -1,0 +1,12 @@
+#!/usr/bin/with-contenv bash
+
+TZ=${TZ:-UTC}
+
+if [ ! -e /usr/share/zoneinfo/$TZ ]; then
+	echo "Invalid timezone! Defaulting to UTC."
+	TZ="UTC"
+fi
+
+ln -sf /usr/share/zoneinfo/$TZ /etc/localtime
+echo $TZ > /etc/timezone
+export TZ=$TZ
