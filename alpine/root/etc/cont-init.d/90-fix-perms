@@ -7,7 +7,8 @@ chown -R $PUID:$PGID /app
 chown -R $PUID:$PGID /config
 
 echo "
--- 90-fix-perms --
+--------- 90-fix-perms -----------
 Fixed /app folder permissions
 Fixed /config folder permissions
+----------------------------------
 "
