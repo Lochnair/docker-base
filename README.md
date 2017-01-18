@@ -36,7 +36,7 @@ docker pull lochnair/base:alpine-mono
 - Includes latest Pip
 - Includes build tools for compiling Python modules
 
-Note: You should uninstall the following packages once you've installed all the packages you need to save space:
+Note: To save space you should uninstall the following packages once you've installed the Python modules you need:
 - build-base
 - python2-dev
 
