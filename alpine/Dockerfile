@@ -12,6 +12,7 @@ ARG S6_ARCH="amd64"
 RUN apk add \
     --no-cache \
     --update \
+    bash \
     shadow \
     tzdata
 
