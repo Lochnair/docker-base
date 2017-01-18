@@ -1,0 +1,9 @@
+PUID=${PUID:-313}
+PGID=${PGID:-313}
+
+chown -R $PUID:$PGID /app
+
+echo "
+-- 20-fix-perms --
+Fixed /app folder permissions
+"
