@@ -6,10 +6,10 @@ LABEL Description="Base image"
 ARG S6_VER="v1.18.1.5"
 ARG S6_ARCH="amd64"
 
-RUN \
 # Install packages:
 # We need shadow for modifying users
 # and tzdata to set the correct timezone
+RUN \
 apk add \
     --no-cache \
     --update \
@@ -17,10 +17,11 @@ apk add \
     curl \
     openssl \
     shadow \
-    tzdata && \
+    tzdata
 
 # Install S&-overlay
-curl -L -o /tmp/s6-overlay-${S6_ARCH}.tar.gz https://github.com/just-containers/s6-overlay/releases/download/${S6_VER}/s6-overlay-${S6_ARCH}.tar.gz && \
+RUN curl -L -o /tmp/s6-overlay-${S6_ARCH}.tar.gz https://github.com/just-containers/s6-overlay/releases/download/${S6_VER}/s6-overlay-${S6_ARCH}.tar.gz
+RUN \
 tar xzf /tmp/s6-overlay-${S6_ARCH}.tar.gz -C / && \
 
 # Create app folder
