@@ -12,6 +12,10 @@ Pull with:
 docker pull lochnair/base:alpine
 ```
 
+## Glibc
+- Based on above Alpine image
+- Includes a compat layer for running glibc applications on musl
+
 ## Java
 - Based on above Alpine image
 - Uses the latest OpenJDK 8 runtime from the Alpine repository
