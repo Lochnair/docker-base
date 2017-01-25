@@ -29,7 +29,7 @@ mkdir /app && \
 mkdir /config && \
 
 # Create container user
-useradd -u 313 -U -s /bin/false -d /app cont && \
+useradd -u 313 -U -s /bin/false -d /config cont && \
 usermod -G users cont
 
 COPY root/ /
