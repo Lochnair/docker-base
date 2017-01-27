@@ -1,0 +1,14 @@
+#!/usr/bin/with-contenv bash
+
+PUID=${PUID:-313}
+PGID=${PGID:-313}
+
+groupmod -g "$PGID" cont
+usermod -u "$PUID" cont
+
+echo "
+--------- 10-add-user ------------
+User UID: $(id -u cont)
+User GID: $(id -g cont)
+----------------------------------
+"
