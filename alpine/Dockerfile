@@ -3,7 +3,7 @@ MAINTAINER Lochnair <me@lochnair.net>
 
 LABEL Description="Base image"
 
-ARG S6_VER="v1.18.1.5"
+ARG S6_VER="v1.19.1.1"
 ARG S6_ARCH="amd64"
 
 # Install packages:
