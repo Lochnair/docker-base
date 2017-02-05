@@ -3,34 +3,19 @@ MAINTAINER Lochnair <me@lochnair.net>
 
 LABEL Description="Mono base image (Alpine)"
 
-ARG MONO_VERSION="4.8.0"
-ARG MONO_BUILD="478"
-
 # Install build dependencies
 RUN \
 apk add \
     --no-cache \
+    --repository http://dl-cdn.alpinelinux.org/alpine/edge/testing \
     --update \
-    autoconf \
-    automake \
-    cmake \
-    g++ \
-    gcc \
-    gettext \
-    libstdc++ \
-    libtool \
-    linux-headers \
-    make
+    libgdiplus-dev
 
-# Download Mono tarball
+# Download Mono package
 RUN \
-curl -L -o "/tmp/mono.tar.bz2" "http://download.mono-project.com/sources/mono/mono-${MONO_VERSION}.${MONO_BUILD}.tar.bz2"
+curl -L -o "/tmp/mono.apk" "https://build.lochnair.net/view/Alpine/job/alpine-mono/10/artifact/packages/x86_64/mono-4.6.2.16-r1.apk"
 
-# Compile Mono
+# Install Mono
 RUN \
-cd /tmp && \
-tar xf "mono.tar.bz2" && \
-cd "mono-${MONO_VERSION}" && \
-./configure --prefix=/usr && \
-make -j4 && \
-make install
+apk add --no-cache \
+    "/tmp/mono.apk"
