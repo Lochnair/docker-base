@@ -11,9 +11,7 @@ apk add \
     --update \
     libgdiplus-dev
 
-# Download signing key
-RUN \
-curl -L -o "/etc/apk/keys/lochnair.rsa.pub" "https://gist.githubusercontent.com/Lochnair/038b5f66942a2859eeb893753de64963/raw/817b13368b9d611f058cc7c8949717284dea628c/lochnair_alpine.rsa.pub"
+COPY root/ /
 
 # Download Mono package
 RUN \
@@ -23,3 +21,7 @@ curl -L -o "/tmp/mono.apk" "https://build.lochnair.net/view/Alpine/job/alpine-mo
 RUN \
 apk add --no-cache \
     "/tmp/mono.apk"
+
+# Remove tmp files
+RUN \
+rm /tmp/*
