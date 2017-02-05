@@ -1,4 +1,4 @@
-FROM alpine:edge
+FROM alpine:3.5
 MAINTAINER Lochnair <me@lochnair.net>
 
 LABEL Description="Base image"
