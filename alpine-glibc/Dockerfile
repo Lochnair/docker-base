@@ -1,7 +1,7 @@
 FROM lochnair/base:alpine
 MAINTAINER Lochnair <me@lochnair.net>
 
-LABEL Description="Docker base image based on Alpine Linux, with glibc compat"
+LABEL Description="Alpine base image, with glibc"
 
 ENV ALPINE_GLIBC_BASE_URL="https://github.com/sgerrand/alpine-pkg-glibc/releases/download"
 ENV ALPINE_GLIBC_PACKAGE_VERSION="2.23-r3"
