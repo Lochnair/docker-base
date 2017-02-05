@@ -3,7 +3,8 @@ MAINTAINER Lochnair <me@lochnair.net>
 
 LABEL Description="Mono base image (Alpine)"
 
-ARG MONO_VERSION="4.8.0.478"
+ARG MONO_VERSION="4.8.0"
+ARG MONO_BUILD="478"
 
 # Install build dependencies
 RUN \
@@ -20,7 +21,7 @@ apk add \
 
 # Download Mono tarball
 RUN \
-curl -L -o "/tmp/mono.tar.bz2" "http://download.mono-project.com/sources/mono/mono-${MONO_VERSION}.tar.bz2"
+curl -L -o "/tmp/mono.tar.bz2" "http://download.mono-project.com/sources/mono/mono-${MONO_VERSION}.${MONO_BUILD}.tar.bz2"
 
 # Compile Mono
 RUN \
