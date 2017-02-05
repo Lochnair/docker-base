@@ -13,8 +13,10 @@ apk add \
     --update \
     autoconf \
     automake \
+    cmake \
     g++ \
     gcc \
+    gettext \
     libstdc++ \
     libtool \
     make
