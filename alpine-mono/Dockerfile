@@ -19,6 +19,7 @@ apk add \
     gettext \
     libstdc++ \
     libtool \
+    linux-headers \
     make
 
 # Download Mono tarball
