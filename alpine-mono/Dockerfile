@@ -19,7 +19,7 @@ curl -L -o "/tmp/mono.apk" "https://build.lochnair.net/view/Alpine/job/alpine-mo
 
 # Install Mono
 RUN \
-apk add 
+apk add \
     --keys=/etc/apk/keys \
     --no-cache \
     "/tmp/mono.apk"
