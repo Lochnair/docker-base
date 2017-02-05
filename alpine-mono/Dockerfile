@@ -3,14 +3,6 @@ MAINTAINER Lochnair <me@lochnair.net>
 
 LABEL Description="Mono base image (Alpine)"
 
-# Install build dependencies
-RUN \
-apk add \
-    --no-cache \
-    --repository http://dl-cdn.alpinelinux.org/alpine/edge/testing \
-    --update \
-    libgdiplus-dev
-
 COPY root/ /
 
 # Download Mono package
